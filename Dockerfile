@@ -6,7 +6,7 @@
 FROM node:slim
 #ENV NODE_OPTIONS=--max_old_space_size=8192
 # We don't need the standalone Chromium
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+# ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 
 WORKDIR /app
 COPY . .
