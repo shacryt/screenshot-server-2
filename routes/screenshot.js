@@ -51,7 +51,7 @@ router.post('/', async (req, res) => {
         height: 275,
       },
       ignoreHTTPSErrors: true,
-      timeout: 10000,
+      timeout: 15000,
     });
 
     console.log('Creating page...' + address);
@@ -70,7 +70,7 @@ router.post('/', async (req, res) => {
 
     try {
       console.log('Trying...' + address);
-      await page.goto(url, { waitUntil: 'networkidle2', timeout: 10000 });
+      await page.goto(url, { waitUntil: 'networkidle2', timeout: 15000 });
       console.log('Goto complete...' + address);
       const imageBuffer = await page.screenshot();
       console.log('Screenshot taken...' + address);
